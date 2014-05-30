@@ -11,13 +11,15 @@ session_start();
 </head>
 <body>
 	<?php
-		echo "The email address you entered ". "'".$_GET['email']."'"." is a VALID email address! Thank you!";
+		//var_dump($_SESSION);
+		echo "The email address you entered ". "'".$_SESSION['success']['email']
+		."'"." is a VALID email address! Thank you!";
 	?>
 </body>
 </html>
 <?php
 
-$_SESSION = array();
+session_destroy();
 
 ?>
 	

@@ -32,7 +32,8 @@ if (isset($_SESSION['error']))
 	header('Location: index.php');
 }
 else {
-	header("Location: success.php?email=$_POST[email]");
+	$_SESSION['success'] = $_POST;
+	header("Location: success.php");
 }
 
 ?>
